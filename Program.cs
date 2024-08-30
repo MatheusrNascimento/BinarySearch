@@ -9,7 +9,7 @@
         int listNumber = 0;
 
         if (!int.TryParse(listInput, out listNumber))
-            throw new Exception($"O valor {listInput} é muito grande ou não é um numero inteiro!");
+            throw new Exception($"O valor {listInput} é muito grande ou não é um número inteiro!");
 
         int[] list = new int[listNumber];
 
@@ -18,12 +18,12 @@
             list[i] = i;
         }
 
-        Console.WriteLine($"Digite um numero de 0 a {listNumber} para ser buscado");
+        Console.WriteLine($"Digite um número de 0 a {listNumber} para ser buscado");
         string choise = Console.ReadLine();
         int number = 0;
 
         if (!int.TryParse(choise, out number))
-            throw new Exception("Informe um valor inteiro valido");       
+            throw new Exception("Informe um valor inteiro válido");       
 
         BinarySearch(list, number);
     }
@@ -31,7 +31,7 @@
     static void BinarySearch(int[] list, int number)
     {
         DateTime startTime = DateTime.Now;
-        Console.WriteLine($"Iniciando as busca {startTime}");
+        Console.WriteLine($"Iniciando a busca {startTime.}");
 
         int low = 0;
         int high = list.Length - 1;
@@ -41,7 +41,7 @@
             int middle = (low + high) / 2;
 
             int trough = list[middle];
-            
+
             if (trough == number)
             {
                 Console.WriteLine($"A busca foi feita em {DateTime.Now - startTime}");
