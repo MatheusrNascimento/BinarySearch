@@ -31,7 +31,7 @@
     static void BinarySearch(int[] list, int number)
     {
         DateTime startTime = DateTime.Now;
-        Console.WriteLine($"Iniciando a busca {startTime.}");
+        Console.WriteLine($"Iniciando a busca {startTime}");
 
         int low = 0;
         int high = list.Length - 1;
