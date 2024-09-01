@@ -4,7 +4,7 @@
     {
         Console.WriteLine("//////////////////////////////////// Busca Binaria /////////////////////////////////////");
 
-        Console.WriteLine("Insira o tamanho da list que deja buscar");
+        Console.WriteLine("Insira o tamanho da list que deseja buscar");
         string listInput = Console.ReadLine();
         int listNumber = 0;
 
@@ -38,9 +38,7 @@
 
         while (low <= high)
         {
-            int middle = (low + high) / 2;
-
-            int trough = list[middle];
+            int trough = list[(low + high) / 2];
 
             if (trough == number)
             {
@@ -48,9 +46,9 @@
                 break;
             }
             if (trough > number)
-                high = middle - 1;
+                high = trough - 1;
             else
-                low = middle + 1;
+                low = trough + 1;
         }
     }
 }
