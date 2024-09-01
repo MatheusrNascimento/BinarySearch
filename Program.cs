@@ -38,9 +38,7 @@
 
         while (low <= high)
         {
-            int middle = (low + high) / 2;
-
-            int trough = list[middle];
+            int trough = list[(low + high) / 2];
 
             if (trough == number)
             {
@@ -48,9 +46,9 @@
                 break;
             }
             if (trough > number)
-                high = middle - 1;
+                high = trough - 1;
             else
-                low = middle + 1;
+                low = trough + 1;
         }
     }
 }
